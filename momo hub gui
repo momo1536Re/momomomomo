@@ -17,3 +17,7 @@ end)
 MainSection:NewButton("Spam Skill(Dark)", "This is Spam Skill", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/dark%20spam'))()
 end)
+
+MainSection:NewButton("Span Skill(Quake)", "This is Spam Skill", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/Quake%20spam'))()
+end)
