@@ -38,6 +38,19 @@ end)
 --auto farm
 
 local Farm = Window:NewTab("Farm")
+local FarmSection = Farm:NewSection("AutoClick")
+
+-- auto click
+
+Section:NewToggle("autoclick", "autoclicl on screen", function(state)
+    if state then
+        getgenv().autoTap = state
+        print('auto Tap is: ', state);
+    else
+        doTap();
+    end
+end)
+
 local FarmSection = Farm:NewSection("tp")
 
 -- tp button
