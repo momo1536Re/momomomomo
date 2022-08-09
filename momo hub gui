@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Mo bub", "Ocean")
+local Window = Library.CreateLib("Mo hub", "Ocean")
 
 local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Spam skill(Please use the skill once and use it)")
