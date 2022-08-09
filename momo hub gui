@@ -1,0 +1,19 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Mo bub", "Ocean")
+
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Spam skill(Please use the skill once and use it)")
+
+MainSection:NewLabel("Reset if you want to turn off Spam skill")
+
+MainSection:NewButton("Spam Skill(Light)", "This is Spam Skill", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/light%20spam'))()
+end)
+
+MainSection:NewButton("Spam Skill(Magma)", "This is Spam Skill", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/magma%20spam'))()
+end)
+
+MainSection:NewButton("Spam Skill(Dark)", "This is Spam Skill", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/dark%20spam'))()
+end)
