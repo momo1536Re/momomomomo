@@ -38,19 +38,17 @@ end)
 --auto farm
 
 local Farm = Window:NewTab("Farm")
-local FarmSection = Farm:NewSection("autofarm(with light)")
+local FarmSection = Farm:NewSection("tp")
+
+-- tp button
+FarmSection:NewButton("tp for all mobs place", "teleport for place of mobs", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/teleport'))()
+end)
 
 FarmSection:NewLabel("The place where the skill was initially used is the launch point.")
 FarmSection:NewLabel("Please use the skill once and use it")
 
--- tp button
-FarmSection:NewToggle("tp for all mobs place", "teleport for place of mobs", function(state)
-    if state then
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/light%20spam'))()
-    else
-        break
-    end
-end)
+local FarmSection = Farm:NewSection("autofarm(with light)")
 
 -- Light auto farm
 FarmSection:NewButton("Spam Skill(Light))", "This is Spam Skill", function()
