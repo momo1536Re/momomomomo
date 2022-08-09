@@ -44,7 +44,7 @@ local FarmSection = Farm:NewSection("AutoClick")
 
 -- auto click
 
-Section:NewToggle("autoclick", "autoclicl on screen", function(state)
+FarmSection:NewToggle("autoclick", "autoclicl on screen", function(state)
         getgenv().autoTap = state
     if state then
         doTap();
