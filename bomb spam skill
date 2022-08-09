@@ -1,0 +1,17 @@
+script = game:GetService("Players").LocalPlayer.Character.Powers.Bomb;
+sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+local pla = game.Players.LocalPlayer;
+local Mouse = pla:GetMouse();
+
+while wait(0.3) do
+local args = {
+    [1] = sexmo_mo1536Re,
+    [2] = "BombPower5",
+    [3] = "StopCharging",
+    [4] = Mouse.Hit,
+    [5] = pla,
+    [6] = 100
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
+end
