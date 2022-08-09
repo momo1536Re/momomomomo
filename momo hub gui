@@ -45,8 +45,7 @@ local FarmSection = Farm:NewSection("AutoClick")
 -- auto click
 
 Section:NewToggle("autoclick", "autoclicl on screen", function(state)
-    getgenv().autoTap = state
-    print('auto Tap is: ', state);
+        getgenv().autoTap = state
     if state then
         doTap();
     end
