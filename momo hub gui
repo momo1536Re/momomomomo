@@ -1,7 +1,8 @@
-getgenv().autoTap = false;
+
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Mo bub", "Ocean")
+local Window = Library.CreateLib("Mo hub", "Ocean")
+
 
 local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Spam skill(Please use the skill once and use it)")
@@ -40,16 +41,22 @@ end)
 --auto farm
 
 local Farm = Window:NewTab("Farm")
-local FarmSection = Farm:NewSection("AutoClick")
 
 -- auto click
 
-FarmSection:NewToggle("autoclick", "autoclicl on screen", function(state)
-        getgenv().autoTap = state
-    if state then
-        doTap();
-    end
+local FarmSection = Farm:NewSection("auto click")
+local VU = game:GetService("VirtualUser")
+_G.SOMENAME = false;
+
+FarmSection:NewToggle("auto click(not made finish)", "auto click on screen", function(state)
+	if state then
+		while wait(0) do
+			VU:ClickButton1(Vector2.new())
+		end
+	else
+	end	
 end)
+
 
 local FarmSection = Farm:NewSection("tp")
 
