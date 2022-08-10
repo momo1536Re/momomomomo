@@ -3,7 +3,7 @@ sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
 local pla = game.Players.LocalPlayer;
 local Mouse = pla:GetMouse();
 
-while wait(0.3) do
+while wait(0.15) do
 local args = {
     [1] = sexmo_mo1536Re,
     [2] = "QuakePower4",
