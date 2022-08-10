@@ -1,3 +1,6 @@
+local VU = game:GetService("VirtualUser")
+_G.SOMENAME = true;
+
 while _G.SOMENAME == true do
-VU:ClickButton1(Vector2.new())
-wait(0.1)
+	VU:ClickButton1(Vector2.new())
+wait(0.2)
