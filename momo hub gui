@@ -3,8 +3,12 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Mo hub", "Ocean")
 
+-------------------------------------------main
 
 local Main = Window:NewTab("Main")
+
+---auto farm
+
 local MainSection = Main:NewSection("Spam skill(Please use the skill once and use it)")
 
 MainSection:NewLabel("Reset if you want to turn off Spam skill")
@@ -29,7 +33,7 @@ MainSection:NewButton("Spam Skill(Bomb)", "This is Spam Skill", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/momo1536Re/momomomomo/main/bomb%20spam%20skill"))()
 end)
 
--- Charater
+=-------------------------------------Misc
 
 local Misc = Window:NewTab("Misc")
 local MiscSection = Misc:NewSection("JumpPower")
@@ -38,39 +42,3 @@ MiscSection:NewSlider("JumpPower", "JumpPower up", 1000, 50, function(a) -- 500 
 	game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = (a)
 end)
 
---auto farm
-
-local Farm = Window:NewTab("Farm")
-
--- auto click
-
-local FarmSection = Farm:NewSection("auto click")
-local VU = game:GetService("VirtualUser")
-_G.SOMENAME = false;
-
-FarmSection:NewToggle("auto click(not made finish)", "auto click on screen", function(state)
-	if state then
-		while wait(0) do
-			VU:ClickButton1(Vector2.new())
-		end
-	else
-	end	
-end)
-
-
-local FarmSection = Farm:NewSection("tp")
-
--- tp button
-FarmSection:NewButton("tp for all mobs place", "teleport for place of mobs", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/teleport'))()
-end)
-
-FarmSection:NewLabel("The place where the skill was initially used is the launch point.")
-FarmSection:NewLabel("Please use the skill once and use it")
-
-local FarmSection = Farm:NewSection("autofarm(with light)")
-
--- Light auto farm
-FarmSection:NewButton("Spam Skill(Light))", "This is Spam Skill", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/light%20spam'))()
-end)
