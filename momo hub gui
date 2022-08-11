@@ -1,11 +1,16 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Mo hub", "Ocean")
 
+
+local id = game.Players.LocalPlayer.userId
+print(id)
+
+
 -------------------------------------------main
 
 local Main = Window:NewTab("Main")
 
----auto farm
+--- spam skills
 
 local MainSection = Main:NewSection("Spam skill(Please use the skill once and use it)")
 
@@ -34,8 +39,59 @@ end)
 -------------------------------------Misc
 
 local Misc = Window:NewTab("Misc")
+
+--superjump
 local MiscSection = Misc:NewSection("JumpPower")
 
-MiscSection:NewSlider("JumpPower", "JumpPower up", 1000, 50, function(a) -- 500 (MaxValue) | 0 (MinValue)
-	game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = (a)
+MiscSection:NewSlider("JumpPower", "JumpPower up", 1000, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = (s)
+end)
+
+--haki
+local MiscSection = Misc:NewSection("Haki Farm")
+
+MiscSection:NewToggle("buso haki(test-no working)", "good", function(s)
+    if s then
+		_G.haki = true
+        while _G.haki == true do
+            workspace.UserData.User_1433174631.UpdateHaki:FireServer()
+            wait(0.1)
+        end
+    else
+		_G.haki = false
+        while wait(0.1) do
+            if not _G.haki then
+                break
+            end;
+			workspace.UserData.User_1433174631.UpdateHaki:FireServer()
+        end
+    end
+end)
+
+-----------------------------buy juice
+local buy = Window:NewTab("buy")
+
+-- buy cider+
+local buySection = buy:NewSection("Buy water+(need money)")
+
+buySection:NewButton("buy Cider+", "the number of juice", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/momo1536Re/momomomomo/main/Cider%2B"))()
+end)
+
+-- buy Lemonade+
+
+buySection:NewButton("buy Lemonade+", "the number of juice", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/momo1536Re/momomomomo/main/Lemonade%2B"))()
+end)
+
+--buy Juice+
+
+buySection:NewButton("buy Juice+", "the number of juice", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/momo1536Re/momomomomo/main/Juice%2B"))()
+end)
+
+-- buy Smoothie+
+
+buySection:NewButton("buy Smoothie+", "the number of juice", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/momo1536Re/momomomomo/main/Smoothie%2B"))()
 end)
