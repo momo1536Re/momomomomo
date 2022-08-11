@@ -1,0 +1,14 @@
+getgenv().buywater = true;
+
+    function buywater(buyType, buyLimit)
+        spawn(function()
+            local iteration = 0;
+            while wait() do
+                if not buywater or iteration == buyLimit then break end;
+                local args = {[1] = "Smoothie+"}
+                workspace.Merchants.BetterDrinkMerchant.Clickable.Retum:FireServer(buyType)
+                iteration = iteration +1
+            end
+        end)
+    end
+    buywater('Smoothie+', 1)
