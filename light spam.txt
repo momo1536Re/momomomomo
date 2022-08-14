@@ -1,21 +1,21 @@
-if Chilly then
+if light then
         script = game:GetService("Players").LocalPlayer.Character.Powers.Chilly;
         sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
         local pla = game.Players.LocalPlayer;
         local Mouse = pla:GetMouse();
-        _G.loop = true
+        _G.light = true
         while _G.loop do
             local args = {
                 [1] = sexmo_mo1536Re,
-                [2] = "ChillyPower5",
+                [2] = "LightPower2",
                 [3] = "StopCharging",
                 [4] = Mouse.Hit,
                 [5] = pla,
                 [6] = 100
             }
-            game:GetService("Players").LocalPlayer.Character.Powers.Chilly.RemoteEvent:FireServer(unpack(args))
+            game:GetService("Players").LocalPlayer.Character.Powers.Light.RemoteEvent:FireServer(unpack(args))
             wait(0.5)
         end
     else
-        _G.loop = false
+        _G.light = false
     end
