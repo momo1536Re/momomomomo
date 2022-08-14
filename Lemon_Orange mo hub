@@ -34,13 +34,13 @@ end)
 
 --chilly spam
 
-script = game:GetService("Players").LocalPlayer.Character.Powers.Chilly;
-sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
-local pla = game.Players.LocalPlayer;
-local Mouse = pla:GetMouse();
+MainSection:NewToggle("Spam Skill(Chilly)", "This is Spam Skill", function(Chilly)
 
-MainSection:NewToggle("Spam Skill(Chilly)", "This is Spam Skill", function(s)
-    if s then
+    if Chilly then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Chilly;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
         _G.loop = true
         while _G.loop do
             local args = {
@@ -48,7 +48,7 @@ MainSection:NewToggle("Spam Skill(Chilly)", "This is Spam Skill", function(s)
                 [2] = "ChillyPower5",
                 [3] = "StopCharging",
                 [4] = Mouse.Hit,
-                [5] = workspace.IslandWindmill.OutterDune.Beach,
+                [5] = pla,
                 [6] = 100
             }
             game:GetService("Players").LocalPlayer.Character.Powers.Chilly.RemoteEvent:FireServer(unpack(args))
