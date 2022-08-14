@@ -1,18 +1,23 @@
-script = game:GetService("Players").LocalPlayer.Character.Powers.Quake;
-sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
-local pla = game.Players.LocalPlayer;
-local Mouse = pla:GetMouse();
+	if Quake then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Quake;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
+        _G.quake = true
+        while _G.quake do
+            local args = {
+				[1] = sexmo_mo1536Re,
+				[2] = "QuakePower4",
+				[3] = "StopCharging",
+				[4] = pla,
+				[5] = Mouse.Hit,
+				[6] = 100,
+				[7] = Vector3.new(-291.6000061035156, 307.67510986328125, -599.3679809570312)
+			}
 
-while wait(0.1) do
-local args = {
-    [1] = sexmo_mo1536Re,
-    [2] = "QuakePower4",
-    [3] = "StopCharging",
-    [4] = pla,
-	[5] = Mouse.Hit,
-    [6] = 100,
-	[7] = Vector3.new(-291.6000061035156, 307.67510986328125, -599.3679809570312)
-}
-
-game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(unpack(args))
-end
+			game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(unpack(args))
+            wait(0.1)
+        end
+    else
+        _G.quake = false
+    end
