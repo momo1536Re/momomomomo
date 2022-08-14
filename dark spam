@@ -1,22 +1,21 @@
 if Dark then
-       	script = game:GetService("Players").LocalPlayer.Character.Powers.Dark;
-        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+    script = game:GetService("Players").LocalPlayer.Character.Powers.Dark;
+    sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
         local pla = game.Players.LocalPlayer;
-        local Mouse = pla:GetMouse();
-        _G.dark = true
-        while _G.dark do
-            local args = {
-				[1] = sexmo_mo1536Re,
-				[2] = "DarkPower4",
-				[3] = "StopCharging",
-				[4] = Mouse.Hit,
-				[5] = pla,
-				[6] = 100
-			}
-
-			game:GetService("Players").LocalPlayer.Character.Powers.Dark.RemoteEvent:FireServer(unpack(args))
-            wait(0.1)
-        end
-    else
-        _G.dark = false
+    local Mouse = pla:GetMouse();
+    _G.dark = true
+    while _G.dark do
+        local args = {
+	    [1] = sexmo_mo1536Re,
+	    [2] = "DarkPower4",
+	    [3] = "StopCharging",
+	    [4] = Mouse.Hit,
+	    [5] = pla,
+	    [6] = 100
+        }
+	game:GetService("Players").LocalPlayer.Character.Powers.Dark.RemoteEvent:FireServer(unpack(args))
+    wait(0.1)
     end
+else
+    _G.dark = false
+end
