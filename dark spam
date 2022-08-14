@@ -1,5 +1,5 @@
-	if Dark then
-        script = game:GetService("Players").LocalPlayer.Character.Powers.Dark;
+if Dark then
+       	script = game:GetService("Players").LocalPlayer.Character.Powers.Dark;
         sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
         local pla = game.Players.LocalPlayer;
         local Mouse = pla:GetMouse();
