@@ -1,0 +1,322 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Mo hub(chongpan) - 0.1.0", "Ocean")
+
+-------------------------------------------main
+
+local Main = Window:NewTab("Main")
+
+--- spam skills
+
+local MainSection = Main:NewSection("Spam skill(Please use the skill once and use it)")
+
+MainSection:NewLabel("Reset if you want to turn off Spam skill")
+
+--- light
+
+MainSection:NewToggle("Spam Skill(Light)", "This is Spam Skill", function(Light) -- 완료
+    if Light then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Chilly;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
+        _G.light = true
+        while _G.loop do
+            local args = {
+                [1] = sexmo_mo1536Re,
+                [2] = "LightPower2",
+                [3] = "StopCharging",
+                [4] = Mouse.Hit,
+                [5] = pla,
+                [6] = 100
+            }
+            game:GetService("Players").LocalPlayer.Character.Powers.Light.RemoteEvent:FireServer(unpack(args))
+            wait(0.5)
+        end
+    else
+        _G.light = false
+    end
+end)
+
+--- magma
+
+MainSection:NewToggle("Spam Skill(Magma)", "This is Spam Skill", function(Magma)
+    if Magma then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Magma;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
+        _G.magma = true
+        while _G.magma do
+            local args = {
+                [1] = momo1536,
+                [2] = "MagmaPower1",
+                [3] = "StopCharging",
+                [4] = Mouse.Hit,
+                [5] = pla,
+                [6] = 100
+            }
+    
+            game:GetService("Players").LocalPlayer.Character.Powers.Magma.RemoteEvent:FireServer(unpack(args))
+            wait(0.2)
+        end
+    else
+        _G.magma = false
+    end
+end)
+
+---dark spam
+
+MainSection:NewToggle("Spam Skill(Dark)", "This is Spam Skill", function(Dark) --완료
+    if Dark then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Dark;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
+        _G.dark = true
+        while _G.dark do
+            local args = {
+            [1] = sexmo_mo1536Re,
+            [2] = "DarkPower4",
+            [3] = "StopCharging",
+            [4] = Mouse.Hit,
+            [5] = pla,
+            [6] = 100
+            }
+        game:GetService("Players").LocalPlayer.Character.Powers.Dark.RemoteEvent:FireServer(unpack(args))
+        wait(0.1)
+        end
+    else
+        _G.dark = false
+    end
+end)
+
+--- quake spam
+
+MainSection:NewToggle("Spam Skill(Quake)", "This is Spam Skill", function(Quake) -- 완료
+    if Quake then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Quake;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
+        _G.quake = true
+        while _G.quake do
+            local args = {
+				[1] = sexmo_mo1536Re,
+				[2] = "QuakePower4",
+				[3] = "StopCharging",
+				[4] = pla,
+				[5] = Mouse.Hit,
+				[6] = 100,
+				[7] = Vector3.new(-291.6000061035156, 307.67510986328125, -599.3679809570312)
+			}
+
+			game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(unpack(args))
+            wait(0.1)
+        end
+    else
+        _G.quake = false
+    end
+end)
+
+-- bomb spam
+
+MainSection:NewToggle("Spam Skill(Bomb)", "This is Spam Skill", function(Bomb)
+    if Bomb then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Bomb;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
+        _G.bomb = true
+        while _G.bomb do
+            local args = {
+                [1] = sexmo_mo1536Re,
+                [2] = "BombPower5",
+                [3] = "StopCharging",
+                [4] = Mouse.Hit,
+                [5] = pla,
+                [6] = 100
+            }
+    
+            game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
+            wait(0.2)
+        end
+    else
+        _G.bomb = false
+    end
+end)
+
+--chilly spam
+
+MainSection:NewToggle("Spam Skill(Chilly)", "This is Spam Skill", function(Chilly)
+
+    if Chilly then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Chilly;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
+        _G.loop = true
+        while _G.loop do
+            local args = {
+                [1] = sexmo_mo1536Re,
+                [2] = "ChillyPower5",
+                [3] = "StopCharging",
+                [4] = Mouse.Hit,
+                [5] = pla,
+                [6] = 100
+            }
+            game:GetService("Players").LocalPlayer.Character.Powers.Chilly.RemoteEvent:FireServer(unpack(args))
+            wait(0.5)
+        end
+    else
+        _G.loop = false
+    end
+end)
+
+-- gum spam
+
+
+-------------------------------------Misc
+
+local Misc = Window:NewTab("Misc")
+
+--superjump
+local MiscSection = Misc:NewSection("JumpPower")
+
+MiscSection:NewSlider("JumpPower", "JumpPower up", 1000, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = (s)
+end)
+
+
+-- get userid
+local id = game.Players.LocalPlayer.userId
+print(id)
+
+--haki
+local MiscSection = Misc:NewSection("Haki Farm")
+
+_G.haki = true
+MiscSection:NewToggle("buso haki(test-no working)", "good", function(s)
+    if s then
+        while _G.haki do
+            workspace.UserData.User_1719435748.UpdateHaki:FireServer()
+            wait(0.1)
+        end
+    else
+		_G.haki = false
+    end
+end)
+
+-----------------------------buy juice
+local buy = Window:NewTab("buy")
+local buySection = buy:NewSection("Buy water+(need money)")
+
+local TXTSecond;
+
+-- text box(seconds)
+
+buySection:NewTextBox("Water+ Seconds", "The number of water+", function(txt)
+	TXTSecond = txt;
+	print(txt)
+end)
+
+
+-- buy cider+
+
+buySection:NewButton("buy Cider+", "the number of juice", function()
+	getgenv().buywater = true;
+    function buywater(buyType, buyLimit)
+        spawn(function()
+            local iteration = TXTSecond;
+            while wait() do
+                if not buywater or iteration == buyLimit then break end;
+                local args = {[1] = "Cider+"}
+                workspace.Merchants.BetterDrinkMerchant.Clickable.Retum:FireServer(unpack(args))
+                iteration = iteration -1
+            end
+        end)
+    end
+    buywater('Cider+', 0)
+end)
+
+-- buy Lemonade+
+
+buySection:NewButton("buy Lemonade+", "the number of juice", function()
+	getgenv().buywater = true;
+    function buywater(buyType, buyLimit)
+        spawn(function()
+            local iteration = TXTSecond;
+            while wait() do
+                if not buywater or iteration == buyLimit then break end;
+                local args = {[1] = "Lemonade+"}
+                workspace.Merchants.BetterDrinkMerchant.Clickable.Retum:FireServer(unpack(args))
+                iteration = iteration -1
+            end
+        end)
+    end
+    buywater('Lemonade+', 0)
+end)
+
+--buy Juice+
+
+buySection:NewButton("buy Juice+", "the number of juice", function()
+	getgenv().buywater = true;
+    function buywater(buyType, buyLimit)
+        spawn(function()
+            local iteration = TXTSecond;
+            while wait() do
+                if not buywater or iteration == buyLimit then break end;
+                local args = {[1] = "Juice+"}
+                workspace.Merchants.BetterDrinkMerchant.Clickable.Retum:FireServer(unpack(args))
+                iteration = iteration -1
+            end
+        end)
+    end
+    buywater('Juice+', 0)
+end)
+
+-- buy Smoothie+
+
+buySection:NewButton("buy Smoothie+", "the number of juice", function()
+	getgenv().buywater = true;
+    function buywater(buyType, buyLimit)
+        spawn(function()
+            local iteration = TXTSecond;
+            while wait() do
+                if not buywater or iteration == buyLimit then break end;
+                local args = {[1] = "Smoothie+"}
+                workspace.Merchants.BetterDrinkMerchant.Clickable.Retum:FireServer(unpack(args))
+                iteration = iteration -1
+            end
+        end)
+    end
+    buywater('Smoothie+', 0)
+end)
+
+------------------------------Test
+local Farm = Window:NewTab("Farm")
+local FarmSection = Farm:NewSection("test")
+-- magma farm
+
+local SelectedSecond;
+
+FarmSection:NewDropdown("Seconds", "set Second", {"1", "5", "10"}, function(value)
+    SelectedSecond = value;
+	print(value)
+end)
+
+FarmSection:NewButton("ClickRod", "Click Super Rod", function()
+	getgenv().Rod = true;
+	function clickRod(buyType, buyLimit)
+		spawn(function()
+			local iteration = SelectedSecond;
+			while wait(1) do
+				if not Rod or iteration == buyLimit then break end;
+				local args = {[1] = Vector3.new(-226.27146911621094, 213, -443.7113952636719)}
+				game:GetService("Players").LocalPlayer.Character:FindFirstChild("Super Rod").Click:FireServer(unpack(args))
+				iteration = iteration -1
+			end
+		end)
+	end
+	clickRod("Rod", 0)
+end)
