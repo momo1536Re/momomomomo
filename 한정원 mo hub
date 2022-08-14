@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("Mo hub - 0.0.5", "Ocean")
+local Window = Library.CreateLib("Mo hub(HJW) - 0.1.0", "Ocean")
 
 -------------------------------------------main
 
@@ -12,24 +12,134 @@ local MainSection = Main:NewSection("Spam skill(Please use the skill once and us
 
 MainSection:NewLabel("Reset if you want to turn off Spam skill")
 
-MainSection:NewButton("Spam Skill(Light)", "This is Spam Skill", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/light%20spam'))()
+MainSection:NewToggle("Spam Skill(Light)", "This is Spam Skill", function(Light) -- 완료
+    if Light then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Chilly;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
+        _G.light = true
+        while _G.loop do
+            local args = {
+                [1] = sexmo_mo1536Re,
+                [2] = "LightPower2",
+                [3] = "StopCharging",
+                [4] = Mouse.Hit,
+                [5] = pla,
+                [6] = 100
+            }
+            game:GetService("Players").LocalPlayer.Character.Powers.Light.RemoteEvent:FireServer(unpack(args))
+            wait(0.5)
+        end
+    else
+        _G.light = false
+    end
 end)
 
-MainSection:NewButton("Spam Skill(Magma)", "This is Spam Skill", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/magma%20spam'))()
+MainSection:NewToggle("Spam Skill(Magma)", "This is Spam Skill", function(Magma)
+    if Magma then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Magma;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
+        _G.magma = true
+        while _G.magma do
+            local args = {
+                [1] = momo1536,
+                [2] = "MagmaPower1",
+                [3] = "StopCharging",
+                [4] = Mouse.Hit,
+                [5] = pla,
+                [6] = 100
+            }
+    
+            game:GetService("Players").LocalPlayer.Character.Powers.Magma.RemoteEvent:FireServer(unpack(args))
+            wait(0.2)
+        end
+    else
+        _G.magma = false
+    end
 end)
 
-MainSection:NewButton("Spam Skill(Dark)", "This is Spam Skill", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/dark%20spam'))()
+---dark spam
+
+MainSection:NewToggle("Spam Skill(Dark)", "This is Spam Skill", function(Dark) --완료
+    if Dark then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Dark;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
+        _G.dark = true
+        while _G.dark do
+            local args = {
+            [1] = sexmo_mo1536Re,
+            [2] = "DarkPower4",
+            [3] = "StopCharging",
+            [4] = Mouse.Hit,
+            [5] = pla,
+            [6] = 100
+            }
+        game:GetService("Players").LocalPlayer.Character.Powers.Dark.RemoteEvent:FireServer(unpack(args))
+        wait(0.1)
+        end
+    else
+        _G.dark = false
+    end
 end)
 
-MainSection:NewButton("Spam Skill(Quake)", "This is Spam Skill", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/momo1536Re/momomomomo/main/Quake%20spam'))()
+--- quake spam
+
+MainSection:NewToggle("Spam Skill(Quake)", "This is Spam Skill", function(Quake) -- 완료
+    if Quake then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Quake;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
+        _G.quake = true
+        while _G.quake do
+            local args = {
+				[1] = sexmo_mo1536Re,
+				[2] = "QuakePower4",
+				[3] = "StopCharging",
+				[4] = pla,
+				[5] = Mouse.Hit,
+				[6] = 100,
+				[7] = Vector3.new(-291.6000061035156, 307.67510986328125, -599.3679809570312)
+			}
+
+			game:GetService("Players").LocalPlayer.Character.Powers.Quake.RemoteEvent:FireServer(unpack(args))
+            wait(0.1)
+        end
+    else
+        _G.quake = false
+    end
 end)
 
-MainSection:NewButton("Spam Skill(Bomb)", "This is Spam Skill", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/momo1536Re/momomomomo/main/bomb%20spam%20skill"))()
+-- bomb spam
+
+MainSection:NewToggle("Spam Skill(Bomb)", "This is Spam Skill", function(Bomb)
+    if Bomb then
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Bomb;
+        sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+        local pla = game.Players.LocalPlayer;
+        local Mouse = pla:GetMouse();
+        _G.bomb = true
+        while _G.bomb do
+            local args = {
+                [1] = sexmo_mo1536Re,
+                [2] = "BombPower5",
+                [3] = "StopCharging",
+                [4] = Mouse.Hit,
+                [5] = pla,
+                [6] = 100
+            }
+    
+            game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
+            wait(0.2)
+        end
+    else
+        _G.bomb = false
+    end
 end)
 
 --chilly spam
