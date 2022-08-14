@@ -1,4 +1,4 @@
-	if Quake then
+if Quake then
         script = game:GetService("Players").LocalPlayer.Character.Powers.Quake;
         sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
         local pla = game.Players.LocalPlayer;
