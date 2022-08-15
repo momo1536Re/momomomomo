@@ -21,7 +21,7 @@ MainSection:NewToggle("Spam Skill(Light)", "This is Spam Skill", function(Light)
         local pla = game.Players.LocalPlayer;
         local Mouse = pla:GetMouse();
         _G.light = true
-        while _G.loop do
+        while _G.light do
             local args = {
                 [1] = sexmo_mo1536Re,
                 [2] = "LightPower2",
