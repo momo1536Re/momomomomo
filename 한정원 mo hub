@@ -14,7 +14,7 @@ MainSection:NewLabel("Reset if you want to turn off Spam skill")
 
 MainSection:NewToggle("Spam Skill(Light)", "This is Spam Skill", function(Light) -- 완료
     if Light then
-        script = game:GetService("Players").LocalPlayer.Character.Powers.Chilly;
+        script = game:GetService("Players").LocalPlayer.Character.Powers.Light;
         sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
         local pla = game.Players.LocalPlayer;
         local Mouse = pla:GetMouse();
@@ -45,7 +45,7 @@ MainSection:NewToggle("Spam Skill(Magma)", "This is Spam Skill", function(Magma)
         _G.magma = true
         while _G.magma do
             local args = {
-                [1] = momo1536,
+                [1] = mo_mo1536Re,
                 [2] = "MagmaPower1",
                 [3] = "StopCharging",
                 [4] = Mouse.Hit,
