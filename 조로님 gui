@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("Mo hub(chongpan) - 0.1.0", "Ocean")
+local Window = Library.CreateLib("Mo hub(chongpan) - 0.1.2", "Ocean")
 
 -------------------------------------------main
 
@@ -21,7 +21,7 @@ MainSection:NewToggle("Spam Skill(Light)", "This is Spam Skill", function(Light)
         local pla = game.Players.LocalPlayer;
         local Mouse = pla:GetMouse();
         _G.light = true
-        while _G.loop do
+        while _G.light do
             local args = {
                 [1] = sexmo_mo1536Re,
                 [2] = "LightPower2",
@@ -31,7 +31,7 @@ MainSection:NewToggle("Spam Skill(Light)", "This is Spam Skill", function(Light)
                 [6] = 100
             }
             game:GetService("Players").LocalPlayer.Character.Powers.Light.RemoteEvent:FireServer(unpack(args))
-            wait(0.5)
+            wait(0.1)
         end
     else
         _G.light = false
@@ -58,7 +58,7 @@ MainSection:NewToggle("Spam Skill(Magma)", "This is Spam Skill", function(Magma)
             }
     
             game:GetService("Players").LocalPlayer.Character.Powers.Magma.RemoteEvent:FireServer(unpack(args))
-            wait(0.2)
+            wait(0.1)
         end
     else
         _G.magma = false
@@ -139,7 +139,7 @@ MainSection:NewToggle("Spam Skill(Bomb)", "This is Spam Skill", function(Bomb)
             }
     
             game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
-            wait(0.2)
+            wait(0.1)
         end
     else
         _G.bomb = false
@@ -166,7 +166,7 @@ MainSection:NewToggle("Spam Skill(Chilly)", "This is Spam Skill", function(Chill
                 [6] = 100
             }
             game:GetService("Players").LocalPlayer.Character.Powers.Chilly.RemoteEvent:FireServer(unpack(args))
-            wait(0.5)
+            wait(0.1)
         end
     else
         _G.loop = false
