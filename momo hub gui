@@ -31,7 +31,7 @@ MainSection:NewToggle("Spam Skill(Light)", "This is Spam Skill", function(Light)
                 [6] = 100
             }
             game:GetService("Players").LocalPlayer.Character.Powers.Light.RemoteEvent:FireServer(unpack(args))
-            wait(0.05)
+            wait(0.1)
         end
     else
         _G.light = false
