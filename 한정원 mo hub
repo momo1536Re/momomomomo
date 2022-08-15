@@ -198,7 +198,7 @@ _G.haki = true
 MiscSection:NewToggle("buso haki(test-no working)", "good", function(s)
     if s then
         while _G.haki do
-            workspace.UserData.User_1589807489.UpdateHaki:FireServer()
+            workspace.UserData.User_894488072.UpdateHaki:FireServer()
             wait(0.1)
         end
     else
