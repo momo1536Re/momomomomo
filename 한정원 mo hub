@@ -45,7 +45,7 @@ MainSection:NewToggle("Spam Skill(Magma)", "This is Spam Skill", function(Magma)
         _G.magma = true
         while _G.magma do
             local args = {
-                [1] = mo_mo1536Re,
+                [1] = sexmo_mo1536Re,
                 [2] = "MagmaPower1",
                 [3] = "StopCharging",
                 [4] = Mouse.Hit,
