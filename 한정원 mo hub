@@ -29,7 +29,7 @@ MainSection:NewToggle("Spam Skill(Light)", "This is Spam Skill", function(Light)
                 [6] = 100
             }
             game:GetService("Players").LocalPlayer.Character.Powers.Light.RemoteEvent:FireServer(unpack(args))
-            wait(0.5)
+            wait(0.1)
         end
     else
         _G.light = false
@@ -54,7 +54,7 @@ MainSection:NewToggle("Spam Skill(Magma)", "This is Spam Skill", function(Magma)
             }
     
             game:GetService("Players").LocalPlayer.Character.Powers.Magma.RemoteEvent:FireServer(unpack(args))
-            wait(0.2)
+            wait(0.1)
         end
     else
         _G.magma = false
@@ -135,7 +135,7 @@ MainSection:NewToggle("Spam Skill(Bomb)", "This is Spam Skill", function(Bomb)
             }
     
             game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
-            wait(0.2)
+            wait(0.1)
         end
     else
         _G.bomb = false
@@ -162,7 +162,7 @@ MainSection:NewToggle("Spam Skill(Chilly)", "This is Spam Skill", function(Chill
                 [6] = 100
             }
             game:GetService("Players").LocalPlayer.Character.Powers.Chilly.RemoteEvent:FireServer(unpack(args))
-            wait(0.5)
+            wait(0.1)
         end
     else
         _G.loop = false
