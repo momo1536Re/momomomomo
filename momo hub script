@@ -1,4 +1,4 @@
-if login == "robo/*337" or login == "TroubleMaker" or login == "revenge" or login == "kado123kado" or login == "LemonKing" or login == "Triple-Zoro" then
+if login == "robo/*337" or login == "TroubleMaker" or login == "revenge-is-god" or login == "kado123kado" or login == "LemonKing" or login == "Triple-Zoro" then
 
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     
