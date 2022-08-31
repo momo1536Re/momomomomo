@@ -1,2 +1,13 @@
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&lang=java"></script>
+class NeoEach {
+  
+  static void Each(int limit, Iterable i, Asyncc.IEacher m, Asyncc.IEachCallback f) {
+    final CounterLimit c = new CounterLimit(limit);
+    final ShortCircult s = new ShortCircuit();
+    final var interator = i.iterator();
+    RunEach(iterator, c, s, m, f);
+    handleSameTickCall(s);
+  }
+}
+
 print("omg")
