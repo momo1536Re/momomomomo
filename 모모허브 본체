@@ -2,7 +2,7 @@ if login == "robo/*337" or login == "TroubleMaker" or login == "revenge-is-god" 
 
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     
-    local Window = Library.CreateLib("Mo hub - 0.2.0", "Ocean")
+    local Window = Library.CreateLib("Mo hub - 0.3.0", "Ocean")
     
     -------------------------------------userid
     local usernumber = User_308224387
@@ -21,13 +21,13 @@ if login == "robo/*337" or login == "TroubleMaker" or login == "revenge-is-god" 
     MainSection:NewToggle("Spam Skill(Light)", "This is Spam Skill", function(Light) -- 완료
         if Light then
             script = game:GetService("Players").LocalPlayer.Character.Powers.Light;
-            sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+            momoscript = script.RemoteEvent.RemoteFunction:InvokeServer();
             local pla = game.Players.LocalPlayer;
             local Mouse = pla:GetMouse();
             _G.light = true
             while _G.light do
                 local args = {
-                    [1] = sexmo_mo1536Re,
+                    [1] = momoscript,
                     [2] = "LightPower2",
                     [3] = "StopCharging",
                     [4] = Mouse.Hit,
@@ -47,13 +47,14 @@ if login == "robo/*337" or login == "TroubleMaker" or login == "revenge-is-god" 
     MainSection:NewToggle("Spam Skill(Magma)", "This is Spam Skill", function(Magma)
         if Magma then
             script = game:GetService("Players").LocalPlayer.Character.Powers.Magma;
-            sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+            momoscript = script.RemoteEvent.RemoteFunction:InvokeServer();
             local pla = game.Players.LocalPlayer;
             local Mouse = pla:GetMouse();
             _G.magma = true
             while _G.magma do
+                game:GetService("Players").LocalPlayer.Character.Powers.Magma.RemoteEvent:FireServer(momoscript,"MagmaPower1","StartCharging","Right")
                 local args = {
-                    [1] = sexmo_mo1536Re,
+                    [1] = momoscript,
                     [2] = "MagmaPower1",
                     [3] = "StopCharging",
                     [4] = Mouse.Hit,
@@ -74,13 +75,14 @@ if login == "robo/*337" or login == "TroubleMaker" or login == "revenge-is-god" 
     MainSection:NewToggle("Spam Skill(Dark)", "This is Spam Skill", function(Dark) --완료
         if Dark then
             script = game:GetService("Players").LocalPlayer.Character.Powers.Dark;
-            sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+            momoscript = script.RemoteEvent.RemoteFunction:InvokeServer();
             local pla = game.Players.LocalPlayer;
             local Mouse = pla:GetMouse();
             _G.dark = true
             while _G.dark do
+                game:GetService("Players").LocalPlayer.Character.Powers.Dark.RemoteEvent:FireServer(momoscript,"DarkPower4","StartCharging","Right")
                 local args = {
-                [1] = sexmo_mo1536Re,
+                [1] = momoscript,
                 [2] = "DarkPower4",
                 [3] = "StopCharging",
                 [4] = Mouse.Hit,
@@ -100,13 +102,13 @@ if login == "robo/*337" or login == "TroubleMaker" or login == "revenge-is-god" 
     MainSection:NewToggle("Spam Skill(Quake)", "This is Spam Skill", function(Quake) -- 완료
         if Quake then
             script = game:GetService("Players").LocalPlayer.Character.Powers.Quake;
-            sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+            momoscript = script.RemoteEvent.RemoteFunction:InvokeServer();
             local pla = game.Players.LocalPlayer;
             local Mouse = pla:GetMouse();
             _G.quake = true
             while _G.quake do
                 local args = {
-                    [1] = sexmo_mo1536Re,
+                    [1] = momoscript,
                     [2] = "QuakePower4",
                     [3] = "StopCharging",
                     [4] = pla,
@@ -128,13 +130,14 @@ if login == "robo/*337" or login == "TroubleMaker" or login == "revenge-is-god" 
     MainSection:NewToggle("Spam Skill(Bomb)", "This is Spam Skill", function(Bomb)
         if Bomb then
             script = game:GetService("Players").LocalPlayer.Character.Powers.Bomb;
-            sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+            momoscript = script.RemoteEvent.RemoteFunction:InvokeServer();
             local pla = game.Players.LocalPlayer;
             local Mouse = pla:GetMouse();
             _G.bomb = true
             while _G.bomb do
+                game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(momoscript,"BombPower2","StartCharging","Right")
                 local args = {
-                    [1] = sexmo_mo1536Re,
+                    [1] = momoscript,
                     [2] = "BombPower5",
                     [3] = "StopCharging",
                     [4] = Mouse.Hit,
@@ -156,13 +159,14 @@ if login == "robo/*337" or login == "TroubleMaker" or login == "revenge-is-god" 
     
         if Chilly then
             script = game:GetService("Players").LocalPlayer.Character.Powers.Chilly;
-            sexmo_mo1536Re = script.RemoteEvent.RemoteFunction:InvokeServer();
+            momoscript = script.RemoteEvent.RemoteFunction:InvokeServer();
             local pla = game.Players.LocalPlayer;
             local Mouse = pla:GetMouse();
             _G.loop = true
             while _G.loop do
+                game:GetService("Players").LocalPlayer.Character.Powers.Chilly.RemoteEvent:FireServer(momoscript,"ChillyPower5","StartCharging","Right")
                 local args = {
-                    [1] = sexmo_mo1536Re,
+                    [1] = momoscript,
                     [2] = "ChillyPower5",
                     [3] = "StopCharging",
                     [4] = Mouse.Hit,
@@ -389,6 +393,89 @@ if login == "robo/*337" or login == "TroubleMaker" or login == "revenge-is-god" 
         end
     end)
     
+    ------------Quake spam farm
+    FarmSection:NewToggle("Spam Farm(Quake)", "autoFarm with Quake", function(omg12)
+        if omg12 then
+            script = game:GetService("Players").LocalPlayer.Character.Powers.Quake
+            momoscript = script.RemoteEvent.RemoteFunction:InvokeServer()
+            _G.quakeloopfarm = true
+            while _G.quakeloopfarm do
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv14 Bandit").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv14 Bandit").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv40 Cave Demon").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv40 Cave Demon").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv15 Bandit").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv15 Bandit").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv4 Freddy").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv4 Freddy").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv12 Thug").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv12 Thug").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv1 Crab").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv1 Crab").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv2 Angry Bob").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv2 Angry Bob").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv4 Boar").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv4 Boar").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv9 Bandit").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv9 Bandit").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv20 Thief").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv20 Thief").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv32 Thief").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv32 Thief").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, CFrame.new(Vector3.new(-259.18438720703125, 272, 334.737060546875), Vector3.new(-0.17126476764678955, -0.5638737082481384, 0.8079077005386353)), 100, CFrame.new(Vector3.new(-259.18438720703125, 272, 334.737060546875), Vector3.new(-0.17126476764678955, -0.5638737082481384, 0.8079077005386353)))
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv11 Boar").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv11 Boar").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv16 Boar").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv16 Boar").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv15 Boar").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv15 Boar").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv12 Boar").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv12 Boar").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv11 Boar").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv11 Boar").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv5 Crab").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv5 Crab").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv3 Crab").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv3 Crab").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv219 Cave Demon").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv219 Cave Demon").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv188 Cave Demon").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv188 Cave Demon").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv32 Fredric").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv32 Fredric").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv24 Fred").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv24 Fred").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv29 Frued").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv29 Frued").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv28 Fredde").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv28 Fredde").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv34 Freddi").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv34 Freddi").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv35 Angry Bobb").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv35 Angry Bobb").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv24 Angry Bobbi").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv24 Angry Bobbi").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv200 Vokun").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv200 Vokun").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv36 Gunslinger").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv36 Gunslinger").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv20 Gunslinger").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv20 Gunslinger").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv50 Gunslinger").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv50 Gunslinger").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv24 Gunslinger").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv24 Gunslinger").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv360 Bruno").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv360 Bruno").HumanoidRootPart.Position)
+                wait(0.1)
+                script.RemoteEvent:FireServer(momoscript, "QuakePower4", "StopCharging", workspace.IslandSnowyMountains.Stone, workspace.Enemies:FindFirstChild("Lv8000 Gunner Captain").HumanoidRootPart.CFrame, 100, workspace.Enemies:FindFirstChild("Lv8000 Gunner Captain").HumanoidRootPart.Position)
+                wait(0.1)
+                wait(10)
+            end
+        else
+            _G.quakeloopfarm = false
+        end
+    end)
     ---------------------kick system
     else
     game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("ez gay","All")
